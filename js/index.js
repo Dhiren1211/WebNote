@@ -1,7 +1,7 @@
 // Selecting necessary elements
 const note = document.getElementById('note');
 const saveBtn = document.getElementById('saveBtn');
-const saveAsNewBtn = document.createElement('button'); // Create the Save As New button
+const saveAsNewBtn = document.createElement('button'); 
 const menuIcon = document.getElementById('menuIcon');
 const menu = document.getElementById('menu');
 const savedNotesOption = document.getElementById('savedNotesOption');
@@ -13,9 +13,9 @@ const notesList = document.getElementById('notesList');
 // Add 'Save As New' button properties
 saveAsNewBtn.id = 'saveAsNewBtn';
 saveAsNewBtn.textContent = 'Save As New';
-saveAsNewBtn.style.display = 'none'; // Hidden by default
-saveAsNewBtn.style.marginLeft = '10px'; // To separate it from the save button
-noteContainer.appendChild(saveAsNewBtn); // Append it to the note container
+saveAsNewBtn.style.display = 'none';
+saveAsNewBtn.style.marginLeft = '10px';
+noteContainer.appendChild(saveAsNewBtn);
 
 // Load saved notes from localStorage when the page loads
 let savedNotes = JSON.parse(localStorage.getItem('notes')) || {};
@@ -51,7 +51,7 @@ saveBtn.addEventListener('click', function () {
     alert(`Note "${filename}" saved successfully!`);
 });
 
-// Save as new note to localStorage (Save As New button)
+
 saveAsNewBtn.addEventListener('click', function () {
     const noteContent = note.value.trim();
 
@@ -93,7 +93,7 @@ function displaySavedNotes() {
             openNoteInTextArea(key);
         });
 
-        // Add download button
+    //download button
         const downloadButton = document.createElement('button');
         downloadButton.textContent = 'Download';
         downloadButton.addEventListener('click', function (event) {
@@ -101,7 +101,7 @@ function displaySavedNotes() {
             downloadNoteAsTxt(key);
         });
 
-        // Add delete button
+        // delete button
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
         deleteButton.classList.add('delete');
