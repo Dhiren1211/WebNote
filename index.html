@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Note Taker</title>
+    <link rel="stylesheet" href="./Css/index.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Top Bar with Menu -->
+        <div class="top-bar">
+            <h1>Note Taker</h1>
+            <div class="menu-icon" id="menuIcon">
+                &#9776;
+            </div>
+        </div>
+
+        <!-- Main Note Taking Area -->
+        <div class="note-container" id="noteContainer">
+            <textarea id="note" placeholder="Write your notes here..."></textarea>
+            <br>
+            <button id="saveBtn">Save Note</button>
+        </div>
+
+        <!-- Saved Notes Area (hidden by default) -->
+        <div class="saved-notes-container" id="savedNotesContainer">
+            <div class="back-icon" id="backIcon">&#8592;</div>
+            <h3>Your Saved Notes</h3>
+            <ul id="notesList"></ul>
+        </div>
+
+        <!-- Menu (hidden by default) -->
+        <div class="menu" id="menu">
+            <ul>
+                <li id="savedNotesOption">Saved Notes</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
